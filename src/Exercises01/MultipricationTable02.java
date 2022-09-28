@@ -9,9 +9,8 @@ public class MultipricationTable02 {
 		}
 		System.out.println();
 		for(i=1;i<32;i++) {
-			System.out.print("_");
+			System.out.print("-");
 		}
-		System.out.println();
 		System.out.println();
 		int j;
 		for(j=1;j<10;j++) {
@@ -25,7 +24,6 @@ public class MultipricationTable02 {
 				}
 			}
 			System.out.println();
-			System.out.println("   |");
 		}
 	}
 }
