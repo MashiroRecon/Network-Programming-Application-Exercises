@@ -9,5 +9,5 @@ public class MultipeOfThree {
                 System.out.println();
             }
         }
-    }    
+    }
 }
