@@ -1,5 +1,7 @@
 package Exercises06;
+
 import java.awt.Graphics;
+
 class Coord {
     int x,y;
     Coord(){

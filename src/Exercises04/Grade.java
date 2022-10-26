@@ -50,7 +50,7 @@ public class Grade {
 		else if(score<=getLow()) setLow(score);
     }
 	public void setEot_test(int p_eot_test) {
-		if(p_eot_test<=100&&p_eot_test>0) eot_test=p_eot_test; 
+		if(p_eot_test<=100&&p_eot_test>0) eot_test=p_eot_test;
 		else System.out.println("ERROR");
 	}
 	public int getEot_test() {

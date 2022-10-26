@@ -1,5 +1,7 @@
 package Exercises06;
+
 import java.awt.Graphics;
+
 class Circle extends Coord {
     int color,size;
     Circle(){

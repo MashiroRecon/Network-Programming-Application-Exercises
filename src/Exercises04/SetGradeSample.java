@@ -22,6 +22,7 @@ public class SetGradeSample {
 		else if(data.enshu1.getLastGrade()>=70) System.out.println("  B");
 		else if(data.enshu1.getLastGrade()>=60) System.out.println("  C");
 		else System.out.println("  D");
-		System.out.println("High: "+data.enshu1.high+" Low: "+data.enshu1.low+" Ave: "+data.enshu1.ave+" Total: "+data.enshu1.total+" Num: "+data.enshu1.num);
+		System.out.println("High: "+data.enshu1.high+" Low: "+data.enshu1.low+" Ave: "
+							+data.enshu1.ave+" Total: "+data.enshu1.total+" Num: "+data.enshu1.num);
 	}
 }

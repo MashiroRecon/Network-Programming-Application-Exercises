@@ -1,4 +1,5 @@
 package Exercises06;
+
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
@@ -6,7 +7,8 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-public class Paint extends Frame implements MouseListener,MouseMotionListener{
+
+public class Paint extends Frame implements MouseListener, MouseMotionListener {
     int x,y;
     Coord c;
     public static void main(String[] args){

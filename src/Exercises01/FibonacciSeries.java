@@ -12,12 +12,8 @@ public class FibonacciSeries {
 		while(i+j<=10000) {
 			System.out.printf("%5d",i+j);
 			System.out.println();
-			if(t%2==0) {
-				i=i+j;
-			}
-			else {
-				j=i+j;
-			}
+			if(t%2==0) i=i+j;
+			else j=i+j;
 			t++;
 		}
 	}

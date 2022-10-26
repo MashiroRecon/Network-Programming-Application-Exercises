@@ -1,5 +1,7 @@
 package Exercises06;
+
 import java.awt.Graphics;
+
 class Dot extends Coord {
     int color,size;
     Dot(){

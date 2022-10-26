@@ -51,7 +51,6 @@ public class CitStudent02 {
 	}
 	/*public double getGPA() {
 		S_Unit=A_Unit=B_Unit=C_Unit=2;
-		
 		return   //((S_Unit*4+A_Unit*3+B_Unit*2+C_Unit)/
 	}*/
 }
