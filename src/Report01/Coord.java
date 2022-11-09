@@ -19,5 +19,5 @@ class Coord {
     public void print(){
         System.out.println("x = "+x+" y = "+y);
     }
-    public void paint(Graphics g){}
+    public void paint(Graphics g,int i){}
 }
