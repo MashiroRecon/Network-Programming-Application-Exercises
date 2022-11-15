@@ -10,7 +10,6 @@ class Coord {
     public void move(int dx,int dy){
         x+=dx;
         y+=dy;
-        // System.out.print("move1");
     }
     public void moveto(int x,int y){
         this.x=x;

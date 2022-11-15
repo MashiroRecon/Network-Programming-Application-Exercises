@@ -71,9 +71,18 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
     }
     @Override public void mouseReleased(MouseEvent e){
         obj.moveto(e.getX(),e.getY());
-        if(obj instanceof Dot==true)objList_D.add(obj);
-        else if(obj instanceof Box==true)objList_B.add(obj);
-        else if(obj instanceof Circle==true)objList_C.add(obj);
+        if(obj instanceof Dot==true){
+            objList_D.add(obj);
+            if(objList_D.size()>30)objList_D.remove(0);
+        }
+        else if(obj instanceof Box==true){
+            objList_B.add(obj);
+            if(objList_B.size()>30)objList_B.remove(0);
+        }
+        else if(obj instanceof Circle==true){
+            objList_C.add(obj);
+            if(objList_C.size()>30)objList_C.remove(0);
+        }
         obj=null;
         repaint();
     }
