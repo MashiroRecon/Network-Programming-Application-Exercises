@@ -73,9 +73,10 @@ public class Paint4 extends Frame implements MouseListener, MouseMotionListener,
     @Override public void paint(Graphics g){
         Figure f;
         for(int i=0;i<objList.size();i++){
-            f=objList.get(i);
+            f=(Figure)objList.get(i);
             f.paint(g);
         }
+        if(mode>=1)obj.paint(g);
     }
     @Override public void actionPerformed(ActionEvent e){
         save("paint.dat");
