@@ -76,7 +76,7 @@ public class Paint3 extends Frame implements MouseListener, MouseMotionListener,
             obj=new Line();
         }
         else {
-            obj=new Box();
+            obj=new Rect();
         }
         if(obj!=null){
             obj.moveto(e.getX(),e.getY());
