@@ -1,13 +1,16 @@
-package Exercises10;
+package Report02;
 
-import java.awt.Graphics;
+import java.awt.*;
 
-class Box extends Figure {
+public class Rect extends Figure {
     int size;
     static int count_b,line_x,line_y =0;
-    Box(){
+    Rect(){
         count_b++;
         size=50;
+    }
+    @Override public void paint(Graphics g){
+        g.drawRect(x,y,w,h);
     }
     @Override public void paint(Graphics g,int i){
         g.setColor(color);

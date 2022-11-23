@@ -1,11 +1,11 @@
-package Exercises10;
+package Report02;
 
 import java.util.*;
 import java.io.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Paint4 extends Frame implements MouseListener, MouseMotionListener, ActionListener {
+public class Report_Paint extends Frame implements MouseListener, MouseMotionListener, ActionListener {
     int x,y,z;
     ArrayList<Figure>objList;
 //    ArrayList<Figure>objList_D;
@@ -17,9 +17,10 @@ public class Paint4 extends Frame implements MouseListener, MouseMotionListener,
     int mode=0;
     Figure obj;
     public static void main(String[] args){
-        Paint4 f=new Paint4();
-        f.setSize(640,480);
-        f.setTitle("Report_Paint Sample");
+        Report_Paint f=new Report_Paint();
+//      f.setSize(640,480);
+        f.setSize(1080,720);
+        f.setTitle("Report_Paint");
         f.addWindowListener(new WindowAdapter(){
             @Override public void windowClosing(WindowEvent e){
                 System.exit(0);
@@ -27,7 +28,7 @@ public class Paint4 extends Frame implements MouseListener, MouseMotionListener,
         f.setVisible(true);
         if(args.length==1)f.load(args[0]);
     }
-    Paint4(){
+    Report_Paint(){
         objList=new ArrayList<Figure>();
 //        objList_D=new ArrayList<Figure>();
 //        objList_B=new ArrayList<Figure>();
@@ -35,19 +36,19 @@ public class Paint4 extends Frame implements MouseListener, MouseMotionListener,
         setLayout(null);
         cbg=new CheckboxGroup();
         c1=new Checkbox("丸",cbg,true);
-        c1.setBounds(560,30,60,30);
+        c1.setBounds(10,30,60,30);
         add(c1);
         c2=new Checkbox("円",cbg,false);
-        c2.setBounds(560,60,60,30);
+        c2.setBounds(10,60,60,30);
         add(c2);
         c3=new Checkbox("四角",cbg,false);
-        c3.setBounds(560,90,60,30);
+        c3.setBounds(10,90,60,30);
         add(c3);
         c4=new Checkbox("線",cbg,false);
-        c4.setBounds(560,120,60,30);
+        c4.setBounds(10,120,60,30);
         add(c4);
         end=new Button("終了");
-        end.setBounds(560,300,60,30);
+        end.setBounds(10,300,60,30);
         add(end);
         addMouseListener(this);
         addMouseMotionListener(this);
@@ -125,7 +126,7 @@ public class Paint4 extends Frame implements MouseListener, MouseMotionListener,
 //            System.out.println("Sum(Line) : "+Box.count_l);
         }
         else {
-            obj=new Box();
+            obj=new Rect();
 //            System.out.println("Sum(Box) : "+Box.count_b);
         }
         if(obj!=null){
