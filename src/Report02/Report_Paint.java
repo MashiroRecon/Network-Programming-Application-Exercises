@@ -9,7 +9,7 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
     int x,y,z;
     ArrayList<Figure>objList;
     CheckboxGroup cbg_f,cbg_c;
-    Checkbox f1,f2,f3,f4,c1,c2,c3,c4;
+    Checkbox f1,f2,f3,f4,f5,c1,c2,c3,c4;
     Button end;
     int mode=0;
     Figure obj;
@@ -42,6 +42,9 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
         f4=new Checkbox("線",cbg_f,false);
         f4.setBounds(10,120,60,30);
         add(f4);
+        f5=new Checkbox("楕円",cbg_f,false);
+        f5.setBounds(10,150,60,30);
+        add(f5);
         c1=new Checkbox("黒",cbg_c,true);
         c1.setBounds(80,30,60,30);
         add(c1);
@@ -117,7 +120,12 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
             mode=2;
             obj=new Line();
         }
+        else if(f==f5){
+            mode=2;
+            obj=new Oval();
+        }
         else {
+            mode=2;
             obj=new Rect();
         }
         if(c==c1)color=Color.black;
