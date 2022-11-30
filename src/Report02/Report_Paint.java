@@ -134,7 +134,9 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
         }
         else if(f==f6){
             mode=2;
-            obj=new poligonal();
+            if(e.getButton()==MouseEvent.BUTTON1)obj=new poligonal(0);
+            else if(e.getButton()==MouseEvent.BUTTON3)obj=new poligonal(1);
+            else obj=new poligonal(0);
         }
         else {
             mode=2;
