@@ -9,7 +9,7 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
     int x,y,z;
     ArrayList<Figure>objList;
     CheckboxGroup cbg_f,cbg_c;
-    Checkbox f1,f2,f3,f4,f5,c1,c2,c3,c4;
+    Checkbox f1,f2,f3,f4,f5,f6,c1,c2,c3,c4;
     Button end;
     int mode=0;
     Figure obj;
@@ -45,6 +45,9 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
         f5=new Checkbox("楕円",cbg_f,false);
         f5.setBounds(10,150,60,30);
         add(f5);
+        f6=new Checkbox("折れ線",cbg_f,false);
+        f6.setBounds(10,180,60,30);
+        add(f6);
         c1=new Checkbox("黒",cbg_c,true);
         c1.setBounds(80,30,60,30);
         add(c1);
@@ -89,8 +92,13 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
     }
     @Override public void paint(Graphics g){
         Figure f;
+        int poligonal=0;
         for(int i=0;i<objList.size();i++){
             f=(Figure)objList.get(i);
+            if(f instanceof poligonal==true){
+                poligonal++;
+                f.paint(g,poligonal);
+            }
             f.paint(g);
         }
         if(mode>=1)obj.paint(g);
@@ -123,6 +131,10 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
         else if(f==f5){
             mode=2;
             obj=new Oval();
+        }
+        else if(f==f6){
+            mode=2;
+            obj=new poligonal();
         }
         else {
             mode=2;
