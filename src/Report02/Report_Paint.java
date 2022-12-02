@@ -10,7 +10,7 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
     ArrayList<Figure>objList;
     CheckboxGroup cbg_f,cbg_c;
     Checkbox f1,f2,f3,f4,f5,f6,c1,c2,c3,c4;
-    Button undo,end;
+    Button undo,end,redzone;
     int mode=0;
     Figure obj;
     Color color;
@@ -66,10 +66,14 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
         end=new Button("終了");
         end.setBounds(10,600,60,30);
         add(end);
+        redzone=new Button("???");
+        redzone.setBounds(10,640,60,30);
+        add(redzone);
         addMouseListener(this);
         addMouseMotionListener(this);
         undo.addActionListener(this);
         end.addActionListener(this);
+        redzone.addActionListener(this);
     }
     public void save(String fname){
         try{
@@ -115,6 +119,9 @@ public class Report_Paint extends Frame implements MouseListener, MouseMotionLis
         else if(e.getSource()==end){
             save("paint.dat");
             System.exit(0);
+        }
+        else if(e.getSource()==redzone){
+            RedZone.redzone();
         }
     }
     @Override public void mousePressed(MouseEvent e){
