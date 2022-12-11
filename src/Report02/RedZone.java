@@ -5,7 +5,6 @@ import java.io.*;
 import java.net.MalformedURLException;
 import javax.sound.sampled.*;
 
-
 public class RedZone {
     public static void redzone(){
         JFrame dialog=new JFrame();
@@ -57,6 +56,4 @@ public class RedZone {
         }
         return null;
     }
-
-
 }
