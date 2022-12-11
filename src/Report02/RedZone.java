@@ -1,6 +1,5 @@
 package Report02;
 
-import java.awt.*;
 import javax.swing.*;
 import java.io.*;
 import java.net.MalformedURLException;
@@ -25,13 +24,11 @@ public class RedZone {
                 Clip bgm=createClip(new File("RedZone.wav"));
                 bgm.start();
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(80000);
                 }
                 catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                FloatControl ctrl=(FloatControl)bgm.getControl(FloatControl.Type.MASTER_GAIN);
-                ctrl.setValue(0);
                 bgm.close();
             }
             else if(second==JOptionPane.CANCEL_OPTION){}
